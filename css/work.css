@@ -117,3 +117,25 @@
 /* Block actions (라이브 사이트 링크) */
 .block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
 @media (max-width: 768px) { .block-actions .btn { width: 100%; justify-content: center; } }
+
+/* ---------- Browser frame (전체 페이지 스크롤 미리보기) ---------- */
+.browser { position: relative; border: 1px solid var(--color-border); border-radius: 16px; overflow: hidden; background: var(--color-surface); box-shadow: 0 40px 80px -40px rgba(17,17,17,.28); }
+.browser-bar { display: flex; align-items: center; gap: 16px; height: 46px; padding: 0 18px; background: #ECEAE4; border-bottom: 1px solid var(--color-border); }
+.browser-bar .dots { display: flex; gap: 7px; flex: 1; }
+.browser-bar .dots i { width: 11px; height: 11px; border-radius: 50%; background: #D2CFC7; }
+.browser-bar .url { flex: 0 1 420px; padding: 5px 16px; border-radius: 999px; background: var(--color-surface); color: var(--color-text-sub); font-size: 13px; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.browser-bar .open { flex: 1; text-align: right; font-size: 13px; color: var(--color-text-sub); transition: color .2s; }
+.browser-bar .open:hover { color: var(--color-primary); }
+.browser-view { height: min(78vh, 820px); overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(25,37,170,.4) transparent; }
+.browser-view img { width: 100%; }
+.browser-hint { position: absolute; left: 50%; bottom: 24px; transform: translateX(-50%); padding: 10px 18px; border-radius: 999px; background: var(--color-primary); color: #fff; font-size: 14px; pointer-events: none; transition: opacity .4s; }
+.browser.is-scrolled .browser-hint { opacity: 0; }
+@media (max-width: 767px) {
+  .browser { border-radius: 12px; }
+  .browser-bar { height: 38px; padding: 0 12px; }
+  .browser-bar .dots i { width: 8px; height: 8px; }
+  .browser-bar .open { display: none; }
+  .browser-bar .dots { flex: 0 0 auto; }
+  .browser-bar .url { flex: 1; font-size: 12px; }
+  .browser-view { height: 64vh; }
+}

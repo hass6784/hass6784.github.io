@@ -32,4 +32,9 @@
   document.querySelectorAll('[data-top]').forEach(a => a.addEventListener('click', e => {
     e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' });
   }));
+
+  // Browser frame: hide scroll hint after first scroll
+  document.querySelectorAll('.browser-view').forEach(v => v.addEventListener('scroll', () => {
+    v.parentElement.classList.add('is-scrolled');
+  }, { once: true, passive: true }));
 })();
