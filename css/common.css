@@ -142,7 +142,10 @@ ul, ol { list-style: none; }
 [data-reveal].is-in { opacity: 1; transform: none; }
 
 /* ---------- Footer / Contact ---------- */
-.contact { background: var(--color-primary); color: #fff; padding: clamp(88px, 9.7vw, 140px) 0 clamp(40px, 4vw, 56px); }
+.contact { background: var(--color-primary); color: #fff; padding: clamp(88px, 9.7vw, 140px) 0 clamp(40px, 4vw, 56px); position: relative; overflow: hidden; isolation: isolate; }
+.contact::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: url("../img/blueprint.svg") right center / cover no-repeat; opacity: .16;
+  -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 55%); mask-image: linear-gradient(100deg, transparent 0%, #000 55%); }
 .contact .t-eyebrow { color: #fff; }
 .contact h2 { margin: 28px 0 40px; }
 .contact-links { display: flex; flex-wrap: wrap; gap: 16px; }

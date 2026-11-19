@@ -139,3 +139,8 @@
   .browser-bar .url { flex: 1; font-size: 12px; }
   .browser-view { height: 64vh; }
 }
+
+/* 확대 링크가 있는 이미지 */
+.fig-zoom { display: block; cursor: zoom-in; }
+.fig-zoom img { transition: transform .4s var(--ease); }
+.fig-zoom:hover img { transform: translateY(-4px); }
