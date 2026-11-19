@@ -103,3 +103,6 @@
   .digital-strip button:nth-child(n+7) { display: block; }
   .lb-prev, .lb-next { display: none; }
 }
+
+/* 메인 타이틀 — 레퍼런스(moodnight) 기준 크기 · 행간 */
+.hero .t-hero { font-size: clamp(44px, 8.6vw, 138px); line-height: 1.04; letter-spacing: -0.05em; }

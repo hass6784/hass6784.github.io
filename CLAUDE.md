@@ -6,7 +6,8 @@
 - 프레임워크 없이 **HTML · CSS · JavaScript만** 씁니다. 빌드 단계가 없습니다.
 - 디자인 원본은 Figma 파일 `1ClGZfx7ervEHwIhbEvR0R`의 **Portfolio Site** 페이지입니다. 문구나 레이아웃을 바꿀 때는 피그마와 맞춰 주세요.
 - 이미지 원본은 같은 파일의 **Export — Site Assets** 페이지에 있습니다. 레이어 이름이 곧 파일 경로입니다(`img/home/featured-irecell` → `img/home/featured-irecell.webp`).
-- 이미지는 WebP(quality 80)로 넣습니다. 큰 화면용은 폭 2000px 이하.
+- 이미지는 WebP(quality 90)로 넣습니다. 큰 화면용은 폭 1920px 이하.
+- 원본(시안 JPG · 캡처 · PPT PNG)이 있으면 Figma를 거치지 않고 원본에서 바로 한 번만 변환합니다. Figma 내보내기는 여러 조각을 합친 이미지(목업 등)에만 씁니다.
 
 ## 폴더 구조
 ```
