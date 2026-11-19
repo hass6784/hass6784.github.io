@@ -113,3 +113,7 @@
   .next-nav .container { flex-direction: column-reverse; align-items: flex-start; }
   .next-nav .next { align-items: flex-start; text-align: left; }
 }
+
+/* Block actions (라이브 사이트 링크) */
+.block-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+@media (max-width: 768px) { .block-actions .btn { width: 100%; justify-content: center; } }
