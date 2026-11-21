@@ -152,9 +152,9 @@
 @media (max-width: 767px) { .decision { grid-template-columns: 1fr; gap: 10px; padding: 22px 0; } }
 
 /* ---------- Design System (색 · 서체 요약) ---------- */
-.ds { display: grid; grid-template-columns: 5fr 7fr; gap: 64px; }
+.ds { display: grid; grid-template-columns: 1fr; gap: 56px; }
 .ds-h { font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-primary); padding-bottom: 16px; margin-bottom: 20px; border-bottom: 1px solid var(--color-border); }
-.ds-chips { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 12px; }
+.ds-chips { display: grid; grid-template-columns: repeat(8, 1fr); gap: 20px 12px; }
 .ds-chips li { display: flex; flex-direction: column; gap: 4px; }
 .ds-chips i { display: block; aspect-ratio: 1; border-radius: 12px; box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); margin-bottom: 6px; }
 .ds-chips strong { font-size: 14px; font-weight: 600; }
@@ -162,7 +162,7 @@
 .ds-types li { display: flex; flex-direction: column; gap: 10px; padding: 18px 0; border-bottom: 1px solid var(--color-border); }
 .ds-types li:first-child { padding-top: 0; }
 .ds-types p { color: #1F1C19; overflow-wrap: anywhere; }
-@media (max-width: 1023px) { .ds { grid-template-columns: 1fr; gap: 40px; } }
+@media (max-width: 1023px) { .ds-chips { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---------- 정보 표 + Background (위아래 분리형) ---------- */
 .info--bar { display: grid; grid-template-columns: 1fr 1fr; column-gap: 64px; margin-top: clamp(40px, 4.4vw, 64px); border-top: 1px solid var(--color-text); }
