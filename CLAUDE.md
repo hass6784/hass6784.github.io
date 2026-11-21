@@ -13,7 +13,7 @@
 ```
 index.html            메인 (Hero · About · Work · Other Works · Contact)
 work/*.html           프로젝트 상세 7개
-  irecell → allagelab → genova → libropia → cnb → signature → lupiel → (처음으로)
+  allagelab → genova → irecell → libropia → cnb → signature → lupiel → (처음으로)  ※ 그룹 안에서 최신순
 css/common.css        토큰(컬러 · 타이포 · 간격), 리셋, 헤더, 푸터, 공통 컴포넌트
 css/home.css          메인 전용
 css/work.css          상세 페이지 공통 템플릿
