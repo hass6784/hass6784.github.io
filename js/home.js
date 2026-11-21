@@ -44,7 +44,8 @@
   /* 3) Lightbox */
   const lb = document.querySelector('.lightbox');
   if (!lb) return;
-  const thumbs = [...document.querySelectorAll('[data-lightbox]')];
+  const all = [...document.querySelectorAll('[data-lightbox]')];
+  let thumbs = all; // 같은 data-group 안에서만 넘겨 봄
   const img = lb.querySelector('img');
   const cap = lb.querySelector('figcaption');
   let idx = 0, lastFocus = null;
@@ -71,8 +72,11 @@
     lastFocus && lastFocus.focus();
   };
 
-  thumbs.forEach((t, i) => t.addEventListener('click', () => open(i)));
-  document.querySelectorAll('[data-open-all]').forEach(b => b.addEventListener('click', () => open(0)));
+  all.forEach(t => t.addEventListener('click', () => {
+    const g = t.dataset.group;
+    thumbs = g ? all.filter(x => x.dataset.group === g) : all;
+    open(thumbs.indexOf(t));
+  }));
   lb.querySelector('.lb-close').addEventListener('click', close);
   lb.querySelector('.lb-prev').addEventListener('click', () => show(idx - 1));
   lb.querySelector('.lb-next').addEventListener('click', () => show(idx + 1));
