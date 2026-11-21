@@ -174,9 +174,3 @@
 .bg-block .t-body-l { color: var(--color-text-sub); display: flex; flex-direction: column; gap: 1em; max-width: 680px; }
 @media (max-width: 1023px) { .bg-block { grid-template-columns: 1fr; gap: 28px; } }
 @media (max-width: 767px) { .info--bar { grid-template-columns: 1fr; } .info--bar > div { grid-template-columns: 72px 1fr; gap: 12px; padding: 14px 0; } .info--bar dd { font-size: 15px; word-break: keep-all; } }
-
-/* ---------- 블루 포인트: 섹션 제목 위 짧은 선 + 정보 표 윗선 ---------- */
-.section-head > h2.t-h1:first-child::before,
-.result .section-head > h2.t-h1:first-child::before,
-.bg-block .head > h2.t-h1:first-child::before { content: ""; display: block; width: 32px; height: 2px; background: var(--color-primary); margin-bottom: 24px; }
-.info--bar { border-top-color: var(--color-primary); }
